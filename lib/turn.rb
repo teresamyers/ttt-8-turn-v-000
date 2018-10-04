@@ -29,19 +29,13 @@ def valid_move?(board, index)
    end
  end
 
- def position_taken?(board, position)
-    taken = nil
-    if board[position] == " "
-      taken = false
-    elsif board[position] == ""
-      taken = false
-    elsif board[position] == nil
-      taken = false
-    else
-      taken = true
-    end
-    taken
+ def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == false
+    true
+  else
+    false
   end
+end
 
  def position_taken?(board, position)
      taken = nil
