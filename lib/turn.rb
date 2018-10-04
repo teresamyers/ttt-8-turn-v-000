@@ -13,20 +13,21 @@ def turn(board)
 end
 
  def input_to_index(input)
-   index = input.to_i - 1
+   return input.to_i - 1
  end
 
 
- def move (board, index, character = "X")
-   board[index] = character
+ def move (board, position, character = "X")
+   board[position] = character
    return board
  end
 
+
 def valid_move?(board, index)
    if index.between?(0, 8) && position_taken?(board, index) == false
-     true
-   else
-     false
+     return true
+   elsif position_taken?(board, index) == true
+     return false
    end
  end
 
