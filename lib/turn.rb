@@ -14,7 +14,9 @@ end
 
  def input_to_index(input)
    index = input.to_i - 1
+   return integer
  end
+
 
  def move (board, index, character = "X")
    board[index] = character
@@ -28,7 +30,6 @@ def valid_move?(board, index)
      false
    end
  end
-
 
  def position_taken?(board, position)
      taken = nil
