@@ -36,25 +36,3 @@ def valid_move?(board, index)
     false
   end
 end
-
- def position_taken?(board, position)
-     taken = nil
-     if board[position] == " "
-       taken = false
-     elsif board[position] == ""
-       taken = false
-     elsif board[position] == nil
-       taken = false
-     else
-       taken = true
-     end
-     taken
-   end
-
-   def valid_move?(board, index)
-   if index.between?(0, 8) && position_taken?(board, index) == false
-     true
-   else
-     false
-   end
- end
